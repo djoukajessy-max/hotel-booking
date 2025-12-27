@@ -1,0 +1,241 @@
+
+/*nav bar*/
+#head{
+    background-color:beige;
+    width:900px;
+    margin-left:180px;
+    text-align:center;
+    display: flex;
+  padding: 10px;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+}
+#ho{
+    margin-left: 20px;
+}
+#la{
+    margin-left:38px;
+}
+#logo{
+    margin-left:34px; 
+}
+a{
+    text-decoration: none;
+    color: black;
+ padding: 14px 12px;
+}
+li{
+    display: contents;
+    list-style: none;
+    top: 0px;
+    
+}
+#bar{
+    margin-left:300px;
+}
+/*home page*/
+
+#h{
+    height: 530px;
+    top: 0;
+    left: 0;
+    
+}
+#out{
+    position: absolute;
+    height: 36.5rem;
+    width: 78rem;
+   object-fit: cover;
+}
+#home{
+    position: absolute;
+    font-family:"playfair display",serif;
+    margin-top: 150px;
+    margin-left: 100px;
+    font-size:70px;
+    color: aliceblue;
+}
+/*button*/
+#an{ margin-top: 350px;
+    margin-left: 190px;
+    font-size: 30px;
+    position: absolute;
+    border-radius:10px;
+    color: aliceblue;
+ background-color:orange;
+width: 270px;
+height: 25px;
+text-align: center;
+font-family:"playfair display",serif;
+}
+
+/*about*/
+#About i{
+    font-size:40px;
+    color: orange;
+}
+#image img{
+    border-radius: 8px;
+    width: 400px;
+    height: 300px;
+    margin-top: 60px;
+    margin-left: 40px;
+}
+#images img{
+    border-radius: 8px;
+    width: 400px;
+    height: 300px;
+    margin-top:110px;
+   
+}
+#About{
+    display: flex;
+    font-family:"playfair display",serif;
+    
+}
+#us{
+    background-color: bisque;
+    margin-top: 50px;
+}
+#ab{ padding-top: 70px;
+    margin-left: 500px;
+    
+}
+#us hr{
+    width: 60px;
+    border: 2px solid rgb(255, 119, 0);
+    position: relative;
+    right: 0px;
+    border-radius: 5px;
+    margin-bottom: 20PX;
+    margin-left: 500px;
+}
+ #span{
+    margin-left: 90px;
+}
+#text{
+    margin-left: 15rem;
+    margin-top: 60px;
+}
+#te{
+    margin-top:60px;
+    margin-left: 40px;
+}
+
+   /*room*/
+   #room{
+    width: 1000px;
+    height: 1400px;
+   }
+   #sec img{
+    width: 350px;
+    height: 300px;
+    border-radius: 10px;
+    
+   }
+#im{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);/*the 3 is to align the images in 3 rows 
+    use grid template for it to look a table form*/
+margin-right: 700px;
+    gap: 430px;
+   
+
+}
+#app img{
+   margin-inline: 1rem;
+    position: absolute;
+    
+}
+
+
+#card{ background-color:beige;
+    display: block;
+    text-align: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    width: 280px;
+    height: 9rem;
+    position: absolute;
+    margin-top: 16rem;
+    margin-left: 50px;
+    font-family:"playfair display",serif;
+}
+h5{
+    margin-left: 200px; 
+    margin-top:20px ;
+    font-size: 15px;
+    color: rgb(232, 172, 60);
+}
+#hand{
+font-size: 30px;
+margin-left: 400px; 
+}
+#grid hr{
+    width:150px;
+    border: 2px solid rgb(255, 119, 0);
+    position: relative;
+    right: 0px;
+    border-radius: 5px;
+    margin-bottom:60PX;
+    margin-left: 450px;
+}
+/*features*/
+#it{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 60px;
+    padding: 40px;
+}
+#Facilities{
+    background-color:bisque;
+    height: 600px;
+    font-family:"playfair display",serif;
+
+}
+
+#Facilities h2{
+    padding-top: 80px;
+padding-left: 500px;
+font-size: 50px;
+}
+#Features i{
+    font-size: 40px;
+   color: orange;
+}
+/*footer*/
+#service{
+display:grid;
+margin-left: 180px;
+
+}
+#ro{
+    font-size: 30px;
+}
+#go{
+  line-height: 50px;
+  margin-left: 80px;
+}
+#go .fa-h{
+    font-size:40px;
+}
+#links{margin-left: 180px;
+    display:grid;
+    line-height: 10px;
+}
+footer{
+    display: flex;
+    
+    color: aliceblue;
+    background-color: black;
+ 
+}
+footer p{
+    font-size:30px;
+}
+footer a{
+    color: aliceblue;
+}

@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ Section</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background:bisque;
+      padding: 30px;
+    }
+
+    .faq-container {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .faq-item {
+      background:beige;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      padding: 15px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .faq-question {
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-answer {
+      display: none;
+      margin-top: 10px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-container">
+    <div class="faq-item">
+      <div class="faq-question">
+        What time is check-in? <span>+</span>
+      </div>
+      <div class="faq-answer">
+        Check-in starts at 2 PM every day.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Do you offer free Wi-Fi? <span>+</span>
+      </div>
+      <div class="faq-answer">
+        Yes, Wi-Fi is available in all rooms and public areas.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Can I cancel my booking? <span>+</span>
+      </div>
+      <div class="faq-answer">
+        Yes, cancellations are free up to 24 hours before check-in.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(item => {
+      item.addEventListener("click", () => {
+        item.classList.toggle("active");
+      });
+    });
+  </script>
+</body>
+</html>
+

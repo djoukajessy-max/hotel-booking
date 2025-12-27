@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fontawesome-free-7.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="more.css">
+
+    <script>
+        /*preventing pass days selection */
+
+        const today = new Date().toISOString().split("T")[0];
+        window.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("indate").setAttribute("min", today);
+            document.getElementById("outdate").setAttribute("min", today);
+
+            /*making sure outdate is after or equal to in date*/
+
+            document.getElementById("indate").addEventListener("change", () => {
+                const selecteddate = document.getElementById("indate").value;
+                document.getElementById("outdate").setAttribute("min", selecteddate);
+                if
+                    (document.getElementById("outdate").value < selecteddate) {
+                    document.getElementById("outdate").value = selecteddate;
+                }
+            });
+        });
+
+        /*selecting option and giving corresponding values*/
+        function suite() {
+            var roomselect = document.getElementById("room");
+            var amountext = document.getElementById("amount");
+            var amountinput = document.getElementById("amountinput");
+            var selectedtext = roomselect.options[roomselect.selectedIndex];
+            var suiteprice = selectedtext.value;
+
+            amountext.textContent = suiteprice + "FCFA Per Day";
+            amountinput.value = suiteprice;
+
+        }
+
+
+    </script>
+</head>
+
+
+<body bgcolor="bisque">
+    <section id="all">
+        <section id="form">
+
+            <div id="phot">
+                <img id="im" src="images/rt.jpeg">
+                <div id="two">
+                    <img src="images/rv.jpeg">
+                    <img src="images/ra.jpeg">
+                </div>
+            </div>
+            <form id="book" autocomplete="on" method="POST" action="more.php">
+                <div id="first">
+                    <h1>Book A Room</h1>
+                    <label><i class="fa-solid fa-user"></i>Name</label><br>
+                    <input type="text" name="name" id="name" required><br><br>
+                    <label><i class="fa-solid fa-credit-card"></i>Id_number</label><br>
+                    <input type="text" name="cni" id="cni" required><br><br>
+                    <label><i class="fa-solid fa-phone"></i>Contact</label><br>
+                    <input type="text" name="contact" id="cont" required><br><br>
+
+                    <div id="clock">
+                        <div class="date"><label><i class="fa-solid fa-clock"></i>Check in Date</label><br>
+                            <input type="date" id="indate" name="indate" required>
+                        </div> <br><br>
+                        <div class="date"><label><i class="fa-solid fa-clock"></i>Check Out Date</label><br>
+                            <input type="date" id="outdate" name="outdate" required> <br><br>
+                        </div>
+                    </div>
+
+                    <label><i class="fa-solid fa-house"></i>room</label><br>
+                    <div name="formid">
+                        <select id="room" name="room" onchange="suite()">
+                            <option>select a suit</option>
+                            <option value="40000">Double suite</option>
+                            <option value="45000" name="room2">Presidential suite</option>
+                            <option value="50000" name="room3">Penthouse suite</option>
+                            <option value="40000" name="room4">Royal suite</option>
+                            <option value="17000" name="room5">Garden view Suit</option>
+                            <option value="25000" name="room6">Honeymoney Suit</option>
+                            <option value="22000" name="room7">Family Suit</option>
+                            <option value="30000" name="room8">Executive Suit</option>
+                            <option value="20000" name="room9">Deluxe Suit</option>
+                            <option value="18000" name="room10">Junior Suit</option>
+                        </select><br><br>
+                    </div>
+                    <label><i class="fa-solid fa-credit-card"></i>amount</label>
+                    <p id="amount"></p>
+                    <input type="hidden" name="amount" id="amountinput">
+
+                </div>
+
+                <div id="pay">
+                    <H2>PAYMENT METHOD</H2>
+                    <P>Select your payment method</P>
+
+                    <div id="me">
+                        <input type="radio" name="pm" id="methodM" value="MTN" required><label for="methodM">MTN</label>
+                        <input type="radio" name="pm" required value="ORANGE" id="methodO"><label
+                            for="methodO">ORANGE</label>
+                        <input type="radio" name="pm" required value="CREDIT CARD" id="methodC"><label
+                            for="methodC">CREDIT CARD</label>
+                        <p>You must have your receipt
+                            screenshot to access the choosen suite
+                        </p>
+
+                        <div id="but">
+                            <button type="submit" id="btn1" onclick="showpop()">Receipt</button>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+
+          
+
+        </section>
+
+        <div id="sentence">
+            <h2>Double suite<br><span>40000/night</span></h2>
+            <p>
+
+                🌟 Luxury Double Suite Room<br><br>
+
+                Step into elegance and comfort in our Double Suite Room, thoughtfully designed for couples,
+                friends, or business <br>travelers who desire space, style, and relaxation.
+
+                <br><br>✨ Features & Comforts<br><br>
+
+            <ul>A spacious king-size bed (or twin double beds) with premium bedding for ultimate rest</ul>
+
+            <ul>A stylish living area with modern décor, perfect for unwinding or entertaining</ul>
+
+            <ul>Panoramic windows offering breathtaking views of the city or serene landscapes</ul>
+
+            <ul> A luxurious en-suite bathroom with a rainfall shower and bathtub</ul>
+
+            <ul> Smart TV, high-speed WiFi, and a dedicated work desk for business or leisure</ul>
+
+
+            💎 Why Guests Love It<br><br>
+            Our Double Suite combines sophistication with comfort
+            ideal for romantic getaways, family stays,
+            or executives who<br> appreciate a little extra luxury.
+
+            <br><br>📍 Perfect for: Couples, small families, or business travelers looking for more than just a room.
+            </p>
+            <h3>Room Features</h3>
+            <div id="ro">
+                <div><i class="fa-solid fa-tv"></i>TV</div>
+                <div><i class="fa-solid fa-wifi"></i>Free Wifi</div>
+                <div><i class="fa-solid fa-fan"></i>Air Condition</div>
+                <div><i class="fa-solid fa-temperature-high"></i>Heater</div>
+                <div><i class="fa-solid fa-phone"></i>Phone</div>
+                <div><i class="fa-solid fa-shirt"></i>Laundry</div>
+                <div><i class="fa-solid fa-user"></i>Adults</div>
+                <div><i class="fa-solid fa-ruler-combined"></i>Size:24m</div>
+            </div>
+            <h4>Children and extra beds</h4>
+            <p>Perfect! Here’s a warm, inviting version for your hotel’s Double Suite with child and extra bed
+                info:<br><br>
+
+
+                👨‍👩‍👧 Family-Friendly Comfort
+
+                Our Double Suite is designed with families in mind:<br>
+
+            <ul>Little ones are welcome! Children under 6 stay free in existing beds.</ul>
+
+            <ul>Extra beds can be added for a cozy night’s sleep (available on request).</ul>
+
+            <ul> Need a crib for your baby? We’re happy to provide one, making your stay as comfortable as possible.
+            </ul>
+
+
+            ✨ Plenty of space, comfort, and care — because every family deserves a relaxing, memorable stay.
+
+            </p>
+        </div>
+
+
+
+    </section>
+    <form id="user">
+
+        <h1>BOOKING successful</h1><br><br>
+        <label><i class="fa-solid fa-user"></i>Name</label><br><span id="na"></span><br><br>
+        <label><i class="fa-solid fa-user"></i>Id_num</label><br><span id="cn"></span><br><br>
+        <label><i class="fa-solid fa-phone"></i>contact</label><br><span id="co"></span><br><br>
+        <label><i class="fa-solid fa-clock"></i>check in date</label><br><span id="ci"></span><br><br>
+        <label><i class="fa-solid fa-clock"></i>check out date</label><br><span id="cod"></span><br><br>
+        <label><i class="fa-solid fa-house"></i>room</label><br><span id="roomname"></span><br><br>
+        <label><i class="fa-solid fa-credit-card"></i>amount</label><br><span id="amt"></span><br>
+        <button type="button" id="bt" onclick="home()"><a>ok</a></button>
+
+    </form>
+
+    <script>
+        function showpop() {
+            const inputs = document.querySelectorAll("#book input");
+            let allFilled = true;
+
+            inputs.forEach(input => {
+                if (input.value.trim() === "") {
+                    allFilled = false;
+                }
+            });
+
+            const contact = document.getElementById("cont").value;
+            const pattern = /^6\d{8}$/; // starts with 6, followed by 8 digits
+
+            if (!allFilled) {
+                alert("Please fill in all fields");
+                return false;
+            }
+
+            if (!pattern.test(contact)) {
+            ("Contact must start with 6 and contain 9 digits in total.");
+                return false; // prevent form submission
+            }
+document.getElementById("user").style.display = "block";
+                document.getElementById("all").style.filter = "blur(5px)";
+                return true; // allow submission
+            
+        }
+
+        function home() {
+            const num = document.getElementById("cont").value;
+            alert("receipt send to " + num);
+
+            document.getElementById("book").reset();
+           /* // Clear content
+            document.getElementById("name").innerText = "";
+            document.getElementById("cont").innerText = "";
+            document.getElementById("indate").innerText = "";
+            document.getElementById("outdate").innerText = "";
+            document.getElementById("room").innerText = "";
+            document.getElementById("amount").innerText = "";*/
+
+            // Redirect to home
+            window.location.replace("hotel.html");
+            document.getElementById("user").style.display = "none";
+            document.getElementById("all").style.filter = "none";
+        }
+
+
+        const txt1 = document.getElementById("name");
+        const btn1 = document.getElementById("btn1");
+        const out1 = document.getElementById("na");
+
+        const txt2 = document.getElementById("cont");
+        const txt3 = document.getElementById("indate");
+        const txt4 = document.getElementById("outdate");
+        const txt5 = document.getElementById("room");
+        const txt6 = document.getElementById("amountinput");
+        const txt7 = document.getElementById("cni");
+
+
+        const out2 = document.getElementById("co");
+        const out3 = document.getElementById("ci");
+        const out4 = document.getElementById("cod");
+        const out5 = document.getElementById("roomname");
+        const out6 = document.getElementById("amt");
+        const out7 = document.getElementById("cn");
+
+
+
+        function fun1() {
+
+            out1.innerHTML = txt1.value;
+            out2.innerHTML = txt2.value;
+            out3.innerHTML = txt3.value;
+            out4.innerHTML = txt4.value;
+            out5.innerHTML = txt5.name;
+            out6.innerHTML = txt6.value;
+            out7.innerHTML = txt7.value;
+
+        }
+        btn1.addEventListener("click", fun1);
+
+
+    </script>
+
+</body>
+
+</html>

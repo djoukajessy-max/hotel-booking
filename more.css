@@ -1,0 +1,159 @@
+ #im{
+    width: 370px;
+    height: 600px;
+ }
+ #two img{
+    width: 360px;
+    height:280px;
+
+ }
+ #two{
+    display:grid;
+    padding-left: 20px;
+
+ }
+ #phot{
+    display: flex;
+    padding-left: 40px;
+ }
+ /*form*/
+ input[date]{
+   width: 10px;
+   height: 25px;
+ }
+ .date input { display: block; max-width: 130px;}
+ #clock{
+   display: flex;
+ }
+ #first input{
+   width: 300px;
+   height: 25px;
+   margin-left: 30px;
+ }
+ #first label{
+   margin-left: 30px;
+ }
+ #me{
+   margin-left: 40px;
+ }
+ #room{
+   margin-left: 30px;
+   width: 300px;
+   height: 30px;
+ }
+ #amount{
+   margin-left: 30px;
+ }
+ #book{
+background-color:rgb(221, 231, 247);
+width:360px;
+margin-left:30px;
+ }
+ #book h1{
+   text-align: center;
+   font-size: 25px;
+ }
+ #book i{
+   font-size: 15px;
+  color: orange;
+}
+#form{
+   display: flex;
+}
+/*room*/
+#ro{
+   display: grid;
+   grid-template-columns:repeat(3, 1fr);
+   gap: 10px;
+}
+#sentence{
+   margin-left:35px;
+}
+#ro i{
+   color: grey;
+}
+/*button*/
+#now{
+   margin-left: 100px;
+   background-color: orange;
+   width: 150px;
+height: 30px;
+text-align: center;
+font-family:"playfair display",serif;
+}
+/*payment*/
+
+#pay h2 {
+   text-align: center;
+   font-size: 16px;
+}
+#pay p {
+   margin-left: 40px;
+}
+#pay input{
+  width: 15px;
+}
+
+#button{
+   width: 100px;
+height: 30px;
+text-align: center;
+font-family:"playfair display",serif;
+margin-top: 7;
+margin-left: 40px;
+}
+#button:hover{
+  background-color: orange;
+
+}
+#btn1{
+   width: 100px;
+height: 30px;
+text-align: center;
+font-family:"playfair display",serif;
+margin-left: 30px;
+}
+#btn1:hover{
+  background-color: orange;
+
+}
+#but{
+   display: flex;
+}
+#me p{
+   color: red;
+   margin-left: 0px;
+}
+/*receipt*/
+#user{
+  background-color:rgb(221, 231, 247);
+height:500px;
+width: 400px;
+border-radius: 10px;
+display:none;
+position: fixed;
+top: 5%;
+left: 35%;
+}
+#user h1{
+   text-align: center;
+}
+#user span{
+   margin-left: 40px;
+}
+#user label{
+   margin-left: 20px;
+}
+#bt{
+   margin-left: 130px;
+width: 100px;
+border-radius: 10px;
+}
+#user a{
+   text-decoration: none;
+   color: black;}
+#bt:hover{
+background-color: orange;
+}
+
+
